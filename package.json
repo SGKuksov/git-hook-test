@@ -5,12 +5,16 @@
   "repository": "git@github.com:SGKuksov/git-hook-test.git",
   "author": "Sergei Kuksov <sergey.kuksov@func.ru>",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
   "devDependencies": {
     "husky": "^1.0.0-rc.13"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo $HUSKY_GIT_PARAMS",
+      "pre-commit": "npm test",
       "pre-push": "npm test"
     }
   }
